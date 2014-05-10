@@ -1,0 +1,57 @@
+<VisualMicro>
+  <Program Name="MatrixTest031114" Ext=".ino" Location="C:\Users\David\Documents\Arduino\MatrixTest031114">
+    <Platform Name="arduino10x" Package="arduino" Platform="avr" Architecture="avr">
+      <Board Name="uno" Description="Arduino Uno" CoreFolder="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino" VariantFullPath="C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard" McuIdePath="C:\Program Files\arduino-1.0.3" McuSketchBookPath="C:\Users\David\Documents\Arduino" name="Arduino Uno" upload.protocol="arduino" upload.maximum_size="32256" upload.speed="115200" bootloader.low_fuses="0xff" bootloader.high_fuses="0xde" bootloader.extended_fuses="0x05" bootloader.path="optiboot" bootloader.file="optiboot_atmega328.hex" bootloader.unlock_bits="0x3F" bootloader.lock_bits="0x0F" build.mcu="atmega328p" build.f_cpu="16000000L" build.core="arduino" build.variant="standard" runtime.ide.path="C:\Program Files\arduino-1.0.3" build.system.path="C:\Program Files\arduino-1.0.3\hardware\arduino\system" runtime.ide.version="103" originalid="uno" build.core.vmresolved="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino" build.core.parentfolder.vmresolved="C:\Program Files\arduino-1.0.3\hardware\arduino\cores" build.core.coresparentfolder.vmresolved="C:\Program Files\arduino-1.0.3\hardware\arduino" vm.core.include="arduino.h" vm.boardsource.path="C:\Program Files\arduino-1.0.3\hardware\arduino" vm.platformname.name="avr" build.arch="AVR" ide.hint="Arduino 0023 and 1.0.x Ide" ide.location.key="Arduino" ide.location.ide.winreg="Arduino 1.0.x Application" ide.location.sketchbook.winreg="Arduino 1.0.x Sketchbook" ide.location.sketchbook.preferences="sketchbook.path" ide.location.sketchbook.default="%MYDOCUMENTS%\arduino" ide.location.preferences="%VM_APPDATA_ROAMING%\arduino\preferences.txt" ide.default.package="arduino" ide.default.platform="avr" ide.multiplatform="true" ide.includes="arduino.h" ide.platformswithoutpackage="true" ide.sketchfolder.platforms.exclude="avr" ide.includes.fallback="wprogram.h" ide.extension="ino" ide.extension.fallback="pde" ide.versionLTEQ="149" ide.exe="arduino.exe" ide.hosts="atmel" ide.url="http://arduino.cc/en/Main/Software" vm.debug="true" software="ARDUINO" ide.appid="arduino10x" location.sketchbook="C:\Users\David\Documents\Arduino" build.variant.vmresolved="C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard" compiler.path="C:\Program Files\arduino-1.0.3\hardware\tools\avr\bin\" includes=" -I&quot;C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino&quot;  -I&quot;C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard&quot;  -I&quot;C:\Program Files\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers\VM_DBG&quot;  -I&quot;C:\Users\David\Documents\Arduino\libraries\Adafruit_GFX&quot;  -I&quot;C:\Users\David\Documents\Arduino\libraries\Adafruit_NeoMatrix&quot;  -I&quot;C:\Users\David\Documents\Arduino\libraries\Adafruit_NeoPixel&quot; " build.path="C:\Users\David\AppData\Local\VMicro\Arduino\Builds\MatrixTest031114\uno" build.project_name="MatrixTest031114" build.variant.path="C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard" archive_file="core.a" object_file="C:\Users\David\AppData\Local\VMicro\Arduino\Builds\MatrixTest031114\uno\Adafruit_NeoPixel\Adafruit_NeoPixel.cpp.o" source_file="C:\Users\David\Documents\Arduino\libraries\Adafruit_NeoPixel\Adafruit_NeoPixel.cpp" object_files="&quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\MatrixTest031114\uno\MatrixTest031114.cpp.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\MatrixTest031114\uno\VM_DBG\VM_mem_check.c.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\MatrixTest031114\uno\VM_DBG\VM_DBG.cpp.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\MatrixTest031114\uno\Adafruit_GFX\glcdfont.c.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\MatrixTest031114\uno\Adafruit_GFX\Adafruit_GFX.cpp.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\MatrixTest031114\uno\Adafruit_NeoMatrix\Adafruit_NeoMatrix.cpp.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\MatrixTest031114\uno\Adafruit_NeoPixel\Adafruit_NeoPixel.cpp.o&quot; " build.architecture="avr" vmresolved.compiler.path="C:\Program Files\arduino-1.0.3\hardware\tools\avr\bin\" vmresolved.tools.path="C:\Program Files\arduino-1.0.3\hardware\tools\avr" />
+    </Platform>
+    <Compile CompilerErrors="0" ConfigurationName="Debug" StopOnError="False" OptimiseLibs="True" OptimiseCore="True" BuildPath="C:\Users\David\AppData\Local\VMicro\Arduino\Builds\MatrixTest031114\uno" IsDebugStart="1" SketchName="MatrixTest031114" ReportDigitalPins="0" ReportAnalogPins="0" ReportI2C="0" ReportFreeMemory="0" IncludeDebug="1" LastDebugPreProcessorDefinitions="VM_DEBUG;VM_DEBUG_ENABLE 1;VM_DEBUG_BANDWIDTH_THROTTLE_MS 80;VM_DEBUGGER_TYPE_HARDWARESERIAL 0;VM_DEBUGGER_TYPE_SOFTWARESERIAL 1;VM_DEBUGGER_TYPE_FASTSERIAL 2;VM_DEBUGGER_TYPE_USB 3;VM_DEBUGGER_TYPE_TEENSY 4;VM_DEBUGGER_TYPE_UART 5;VM_DEBUGGER_TYPE_USART 6;VM_DEBUGGER_TYPE_USBSERIAL 7;VM_DEBUGGER_TYPE VM_DEBUGGER_TYPE_HARDWARESERIAL;" IncludesDebug="1" IsCompiled="1" />
+    <Debug DebugEnabled="1" />
+    <VCCodeModel>
+      <VCCodeMacros />
+    </VCCodeModel>
+    <BreakPoints>
+      <BreakPoint Index="1" Name="MatrixTest031114.ino, line 74" Id="c5d91670-4332-4211-a3d3-9349e45b8705" Enabled="1" Message="{millis()}" MessageTextType="2" PreProcessedMessage="{0}" Condition="millis()&gt;0 || millis()&gt;1" ConditionType="1" CurrentHits="0" File="c:\users\david\documents\arduino\matrixtest031114\matrixtest031114.ino" FileLine="74" FileColumn="1" FunctionName="" FunctionLineOffset="1" FunctionColumnOffset="1" HitCountTarget="250" HitCountType="4" Language="C++" LocationType="3" Tag="&lt;vmbp Id='c5d91670-4332-4211-a3d3-9349e45b8705'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>67	  matrix.setBrightness(40);
+68	  matrix.setTextColor(colors[0]);
+69	}
+70	
+71	int x    = matrix.width();
+72	int pass = 0;
+73	
+--&gt;74	void loop() {
+75	  matrix.fillScreen(0);
+76	
+77	  for (int i = 0; i&lt;11; i++){
+78		  matrix.drawRect(i, 0, 2, 12, colors[pass]);
+79		  //matrix.drawPixel(i, 0, colors[1]);
+80		  matrix.show();
+81		  delay(90);
+82		  matrix.fillScreen(0);
+83		  if(++pass &gt;= 3) pass = 0;
+</Source>
+        <MessageVariables>
+          <MessageVariable Name="millis()" Index="1" />
+        </MessageVariables>
+      </BreakPoint>
+      <BreakPoint Index="2" Name="MatrixTest031114.ino, line 79" Id="8dfe8c53-84f7-4709-96fb-8b2df9ef1104" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="c:\users\david\documents\arduino\matrixtest031114\matrixtest031114.ino" FileLine="79" FileColumn="1" FunctionName="loop()" FunctionLineOffset="6" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='8dfe8c53-84f7-4709-96fb-8b2df9ef1104'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>72	int pass = 0;
+73	
+74	void loop() {
+75	  matrix.fillScreen(0);
+76	
+77	  for (int i = 0; i&lt;11; i++){
+78		  matrix.drawRect(i, 0, 2, 12, colors[pass]);
+--&gt;79		  //matrix.drawPixel(i, 0, colors[1]);
+80		  matrix.show();
+81		  delay(90);
+82		  matrix.fillScreen(0);
+83		  if(++pass &gt;= 3) pass = 0;
+84	  }
+85	
+86	
+87	  /*matrix.setCursor(x, 0);
+88	  matrix.print(F("Howdy"));
+</Source>
+      </BreakPoint>
+    </BreakPoints>
+  </Program>
+</VisualMicro>
