@@ -1,9 +1,6 @@
 // VisiPack - David Henshaw & Morgan Renault, March 2014--
 // v1 - 03/14 - Includes basic animation and transitions
 // v2 - 04/14 - Improvements to animations
-// world 6:31pm
-// comment at 6:42
-
 
 #include <Adafruit_GFX.h>
 #include <Adafruit_NeoMatrix.h>
@@ -39,6 +36,7 @@ void setup() {
   matrix.setTextColor(GREEN);
   matrix.setTextWrap(false);
   randomSeed(analogRead(0));			// to help animation queue from being different each time
+  populateAnimationQueue();
 }
 void loop() {
 	matrix.fillScreen(0);					// start with a blank screen
@@ -797,7 +795,7 @@ void populateAnimationQueue() {						// queue is empty, so repopulate it
 		animationQueue[i] = i;
 	}
 	for (byte i = 0; i < numberAnimations; i++) {	// now shuffle the array
-		byte pos = random(0, numberAnimations);		// between 0 and max animations - 1
+		byte pos = random(i, numberAnimations);		// between i and max animations - 1
 		byte t = animationQueue[i];   
 		animationQueue[i] = animationQueue[pos];
 		animationQueue[pos] = t;
