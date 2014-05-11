@@ -2,6 +2,7 @@
 // v1 - 03/14 - Includes basic animation and transitions
 // v2 - 04/14 - Improvements to animations
 // hello 6:21pm
+// goodbye 6:25pm
 
 #include <Adafruit_GFX.h>
 #include <Adafruit_NeoMatrix.h>
