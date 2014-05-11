@@ -95,5 +95,5 @@ void populateAnimationQueue();
 
 #include "C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\arduino.h"
 #include "C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard\pins_arduino.h" 
-#include "\\SERVER\Data\Arduino\VisiPack\VisiPack.ino"
+#include "S:\Arduino\VisiPack\VisiPack.ino"
 #endif
