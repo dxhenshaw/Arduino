@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{19A4C122-4E76-4031-A89E-304D8621FCC4}</ProjectGuid>
+    <RootNamespace>Balls_Test</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino;C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard;C:\Program Files\arduino-1.0.3\libraries\Wire;C:\Program Files\arduino-1.0.3\libraries\Wire\utility;C:\Program Files\arduino-1.0.3\libraries\RealTimeClockDS1307;C:\Program Files\arduino-1.0.3\libraries\RealTimeClockDS1307\utility;C:\Program Files\arduino-1.0.3\libraries\LiquidCrystal_I2C2004V1;C:\Program Files\arduino-1.0.3\libraries\LiquidCrystal_I2C2004V1\utility;C:\Program Files\arduino-1.0.3\libraries\EEPROM;C:\Program Files\arduino-1.0.3\libraries\EEPROM\utility;c:\program files\arduino-1.0.3\hardware\tools\avr\avr\include\;c:\program files\arduino-1.0.3\hardware\tools\avr\avr\include\avr\;c:\program files\arduino-1.0.3\hardware\tools\avr\avr\;c:\program files\arduino-1.0.3\hardware\tools\avr\lib\gcc\avr\4.3.2\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>\\SERVER\Data\Arduino\Kinetic Balls\Balls_Test\Visual Micro\.Balls_Test.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <PreprocessorDefinitions>__AVR_ATmega328P__;_VMDEBUG=1;ARDUINO=103;__AVR__;F_CPU=16000000L;__cplusplus;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="Balls_Test.ino">
+      <FileType>CppCode</FileType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BlinkM_funcs.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Arduino.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\binary.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Client.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\HardwareSerial.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\IPAddress.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\new.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Platform.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Print.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Printable.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Server.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Stream.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Udp.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\USBAPI.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\USBCore.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\USBDesc.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\WCharacter.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\wiring_private.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\WString.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard\pins_arduino.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\libraries\EEPROM\EEPROM.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\libraries\LiquidCrystal_I2C2004V1\LiquidCrystal_I2C.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\libraries\RealTimeClockDS1307\RealTimeClockDS1307.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\libraries\Wire\Wire.h" />
+    <ClInclude Include="LiquidCrystal_I2C.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="Visual Micro\.Balls_Test.vsarduino.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\CDC.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\HardwareSerial.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\HID.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\IPAddress.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\main.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\new.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Print.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Stream.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Tone.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\USBCore.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\WInterrupts.c" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\wiring.c" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\wiring_analog.c" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\wiring_digital.c" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\wiring_pulse.c" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\wiring_shift.c" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\WMath.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\WString.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\libraries\EEPROM\EEPROM.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\libraries\LiquidCrystal_I2C2004V1\LiquidCrystal_I2C.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\libraries\RealTimeClockDS1307\RealTimeClockDS1307.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\libraries\Wire\Wire.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties arduino.upload.port="COM7" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

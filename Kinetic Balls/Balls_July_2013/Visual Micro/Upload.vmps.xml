@@ -1,0 +1,37 @@
+<VisualMicro>
+  <Program Name="Balls_July_2013" Ext=".ino" Location="\\SERVER\Data\Arduino\Kinetic Balls\Balls_July_2013">
+    <Compile CompilerErrors="0" ConfigurationName="Debug" StopOnError="False" OptimiseLibs="True" OptimiseCore="True" BuildPath="C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_July_2013\uno" IsDebugStart="1" SketchName="Balls_July_2013" ReportDigitalPins="0" ReportAnalogPins="0" ReportI2C="0" ReportFreeMemory="0" IncludeDebug="1" LastDebugPreProcessorDefinitions="VM_DEBUG;VM_DEBUG_ENABLE 1;VM_DEBUG_BANDWIDTH_THROTTLE_MS 80;VM_DEBUGGER_TYPE_HARDWARESERIAL 0;VM_DEBUGGER_TYPE_SOFTWARESERIAL 1;VM_DEBUGGER_TYPE_FASTSERIAL 2;VM_DEBUGGER_TYPE_USB 3;VM_DEBUGGER_TYPE_TEENSY 4;VM_DEBUGGER_TYPE_UART 5;VM_DEBUGGER_TYPE_USART 6;VM_DEBUGGER_TYPE_USBSERIAL 7;VM_DEBUGGER_TYPE VM_DEBUGGER_TYPE_HARDWARESERIAL;" IncludesDebug="1" IsCompiled="1" />
+    <Platform Name="arduino10x" Package="arduino" Platform="avr" Architecture="avr">
+      <Board Name="uno" Description="Arduino Uno" CoreFolder="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino" VariantFullPath="C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard" McuIdePath="C:\Program Files\arduino-1.0.3" McuSketchBookPath="C:\Users\David\Documents\Arduino" name="Arduino Uno" upload.protocol="arduino" upload.maximum_size="32256" upload.speed="115200" bootloader.low_fuses="0xff" bootloader.high_fuses="0xde" bootloader.extended_fuses="0x05" bootloader.path="optiboot" bootloader.file="optiboot_atmega328.hex" bootloader.unlock_bits="0x3F" bootloader.lock_bits="0x0F" build.mcu="atmega328p" build.f_cpu="16000000L" build.core="arduino" build.variant="standard" runtime.ide.path="C:\Program Files\arduino-1.0.3" build.system.path="C:\Program Files\arduino-1.0.3\hardware\arduino\system" runtime.ide.version="103" originalid="uno" build.core.vmresolved="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino" build.core.parentfolder.vmresolved="C:\Program Files\arduino-1.0.3\hardware\arduino\cores" build.core.coresparentfolder.vmresolved="C:\Program Files\arduino-1.0.3\hardware\arduino" vm.core.include="arduino.h" vm.boardsource.path="C:\Program Files\arduino-1.0.3\hardware\arduino" vm.platformname.name="avr" build.arch="AVR" ide.hint="Arduino 0023 and 1.0.x Ide" ide.location.key="Arduino" ide.location.ide.winreg="Arduino 1.0.x Application" ide.location.sketchbook.winreg="Arduino 1.0.x Sketchbook" ide.location.sketchbook.preferences="sketchbook.path" ide.location.sketchbook.default="%MYDOCUMENTS%\arduino" ide.location.preferences="%VM_APPDATA_ROAMING%\arduino\preferences.txt" ide.default.package="arduino" ide.default.platform="avr" ide.multiplatform="true" ide.includes="arduino.h" ide.platformswithoutpackage="true" ide.sketchfolder.platforms.exclude="avr" ide.includes.fallback="wprogram.h" ide.extension="ino" ide.extension.fallback="pde" ide.versionLTEQ="149" ide.exe="arduino.exe" ide.hosts="atmel" ide.url="http://arduino.cc/en/Main/Software" vm.debug="true" software="ARDUINO" ide.appid="arduino10x" location.sketchbook="C:\Users\David\Documents\Arduino" build.variant.vmresolved="C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard" compiler.path="C:\Program Files\arduino-1.0.3\hardware\tools\avr\bin\" includes=" -I&quot;C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino&quot;  -I&quot;C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard&quot;  -I&quot;C:\Program Files\arduino-1.0.3\libraries\Wire&quot;  -I&quot;C:\Program Files\arduino-1.0.3\libraries\RealTimeClockDS1307&quot;  -I&quot;C:\Program Files\arduino-1.0.3\libraries\LiquidCrystal_I2C2004V1&quot;  -I&quot;C:\Program Files\arduino-1.0.3\libraries\EEPROM&quot;  -I&quot;C:\Program Files\arduino-1.0.3\libraries\Wire\utility&quot;" build.path="C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_July_2013\uno" build.project_name="Balls_July_2013" build.variant.path="C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard" archive_file="core.a" object_file="C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_July_2013\uno\EEPROM\EEPROM.cpp.o" source_file="C:\Program Files\arduino-1.0.3\libraries\EEPROM\EEPROM.cpp" object_files="&quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_July_2013\uno\Balls_July_2013.cpp.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_July_2013\uno\Wire\Wire.cpp.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_July_2013\uno\Wire\utility\twi.c.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_July_2013\uno\RealTimeClockDS1307\RealTimeClockDS1307.cpp.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_July_2013\uno\LiquidCrystal_I2C2004V1\LiquidCrystal_I2C.cpp.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_July_2013\uno\EEPROM\EEPROM.cpp.o&quot; " build.architecture="avr" vmresolved.compiler.path="C:\Program Files\arduino-1.0.3\hardware\tools\avr\bin\" vmresolved.tools.path="C:\Program Files\arduino-1.0.3\hardware\tools\avr" />
+    </Platform>
+    <Debug DebugMode="Full" DebugEnabled="1" LocalPortSpeed="" RemotePortSpeed="" />
+    <VCCodeModel>
+      <VCCodeMacros />
+    </VCCodeModel>
+    <BreakPoints>
+      <BreakPoint Index="1" Name="Balls_July_2013.ino, line 291" Id="362e7acf-b154-4f8f-9744-d7c268969a55" Enabled="1" Message="{millis()}" MessageTextType="2" PreProcessedMessage="{0}" Condition="millis()&gt;0 || millis()&gt;1" ConditionType="1" CurrentHits="0" File="\\server\data\arduino\kinetic balls\balls_july_2013\balls_july_2013.ino" FileLine="291" FileColumn="1" FunctionName="" FunctionLineOffset="1" FunctionColumnOffset="1" HitCountTarget="250" HitCountType="4" Language="C++" LocationType="3" Tag="&lt;vmbp Id='362e7acf-b154-4f8f-9744-d7c268969a55'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>284				BlinkM_fadeToRandomRGB( unit + 1 , 0xff, 0xff, 0xff);	// set a random color
+285			}
+286	    }
+287	
+288	    if (dialHasTurned() == true) break;								// exit when dial has turned.
+289	  } 
+290	}
+--&gt;291	void loop() {
+292	showTime();
+293	
+294	//menu selection  
+295	if (abs(lastEncoderValue - encoderValue) &gt; encoderGap) {  //menu selection has changed
+296	  if (encoderValue &gt; lastEncoderValue) {                  //figure out what the new menu selection is
+297	    activeMenuSelection ++;                               // add 1 to menu
+298	    if (activeMenuSelection &gt; maxMenuItems) activeMenuSelection = 0;
+299	  }else{ 
+300	    activeMenuSelection --;                               // subtract 1 from menu
+</Source>
+        <MessageVariables>
+          <MessageVariable Name="millis()" Index="1" />
+        </MessageVariables>
+      </BreakPoint>
+    </BreakPoints>
+  </Program>
+</VisualMicro>

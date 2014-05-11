@@ -1,0 +1,34 @@
+<VisualMicro>
+  <Program Name="Balls_Test" Ext=".ino" Location="\\SERVER\Data\Arduino\Kinetic Balls\Balls_Test">
+    <Compile CompilerErrors="0" ConfigurationName="Debug" StopOnError="False" OptimiseLibs="True" OptimiseCore="True" BuildPath="C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_Test\uno" SketchName="Balls_Test" ReportDigitalPins="0" ReportAnalogPins="0" ReportI2C="0" ReportFreeMemory="0" IncludeDebug="1" LastDebugPreProcessorDefinitions="VM_DEBUG;VM_DEBUG_ENABLE 1;VM_DEBUG_BANDWIDTH_THROTTLE_MS 80;VM_DEBUGGER_TYPE_HARDWARESERIAL 0;VM_DEBUGGER_TYPE_SOFTWARESERIAL 1;VM_DEBUGGER_TYPE_FASTSERIAL 2;VM_DEBUGGER_TYPE_USB 3;VM_DEBUGGER_TYPE_TEENSY 4;VM_DEBUGGER_TYPE VM_DEBUGGER_TYPE_HARDWARESERIAL;" IncludesDebug="1" IsCompiled="1" />
+    <Platform Name="Arduino">
+      <Board Name="uno" Description="Arduino Uno" CoreFolder="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino" VariantFullPath="C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard" McuIdePath="C:\Program Files\arduino-1.0.3" name="Arduino Uno" upload.protocol="arduino" upload.maximum_size="32256" upload.speed="115200" bootloader.low_fuses="0xff" bootloader.high_fuses="0xde" bootloader.extended_fuses="0x05" bootloader.path="optiboot" bootloader.file="optiboot_atmega328.hex" bootloader.unlock_bits="0x3F" bootloader.lock_bits="0x0F" build.mcu="atmega328p" build.f_cpu="16000000L" build.core="arduino" build.variant="standard" runtime.ide.path="C:\Program Files\arduino-1.0.3" build.system.path="C:\Program Files\arduino-1.0.3\hardware\arduino\system" software="ARDUINO" runtime.ide.version="103" build.core.vmresolved="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino" build.core.parentfolder.vmresolved="C:\Program Files\arduino-1.0.3\hardware\arduino\cores" build.core.coresparentfolder.vmresolved="C:\Program Files\arduino-1.0.3\hardware\arduino" vm.core.include="arduino.h" vm.boardsource.path="C:\Program Files\arduino-1.0.3\hardware\arduino" vm.boardsource.name="boards.txt" vm.platformname.name="" build.variant.vmresolved="C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard" compiler.path="C:\Program Files\arduino-1.0.3\hardware\tools\avr\bin\" includes=" -I&quot;C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino&quot;  -I&quot;C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard&quot;  -I&quot;C:\Program Files\arduino-1.0.3\libraries\Wire&quot;  -I&quot;C:\Program Files\arduino-1.0.3\libraries\RealTimeClockDS1307&quot;  -I&quot;C:\Program Files\arduino-1.0.3\libraries\LiquidCrystal_I2C2004V1&quot;  -I&quot;C:\Program Files\arduino-1.0.3\libraries\EEPROM&quot; " build.path="C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_Test\uno" build.project_name="Balls_Test" build.variant.path="C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard" archive_file="core.a" object_file="&quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_Test\uno\EEPROM\EEPROM.cpp.o&quot;" source_file="&quot;C:\Program Files\arduino-1.0.3\libraries\EEPROM\EEPROM.cpp&quot;" object_files="&quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_Test\uno\Balls_Test.cpp.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_Test\uno\Wire\Wire.cpp.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_Test\uno\Wire\utility\twi.c.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_Test\uno\RealTimeClockDS1307\RealTimeClockDS1307.cpp.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_Test\uno\LiquidCrystal_I2C2004V1\LiquidCrystal_I2C.cpp.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_Test\uno\EEPROM\EEPROM.cpp.o&quot; " />
+    </Platform>
+    <Debug DebugMode="Full" DebugEnabled="1" RemotePortTransport="HardwareSerial" LocalPort="COM7" RemotePortSpeed="9600" LocalPortSpeed="9600" />
+    <VCCodeModel>
+      <VCCodeMacros />
+    </VCCodeModel>
+    <BreakPoints>
+      <BreakPoint Index="1" Name="Balls_Test.ino, line 561" Id="e6fe9517-cb7f-4fac-a9ff-5f43ef5392f1" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="\\SERVER\Data\Arduino\Kinetic Balls\Balls_Test\Balls_Test.ino" FileLine="561" FileColumn="1" FunctionName="loop()" FunctionLineOffset="325" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='0a3debc4-5c35-40a4-8bfe-7658041c8199'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>554	        
+555	      } while (abs(lastEncoderValue - encoderValue) &lt; encoderGap); // exit when dial has turned. Note &lt; operation.   
+556	      break;
+557	       
+558	      case 11:  // "Sun &amp; Moon"      
+559	        //setUpChandelier(); // adopt chandelier shape xxx
+560	        i = determineTimeOfDay(RTC.getHours());
+--&gt;561	          Serial.print("Time of Day = ");
+562	          Serial.println(i);
+563	        if (i &gt; 1) BlinkM_playScript(allBlinkMs, i, 0, 0); //   Args: blinkM addr, script#, 0=repeat forever, 0=play from beginning
+564	        
+565	        if (i == 0) { // if night...
+566	        Serial.println("i==0");
+567	          BlinkM_fadeToHSB(allBlinkMs, 43, 0, 0x2d);  // white (43) dim      
+568	          BlinkM_fadeToRandomHSB(allBlinkMs, 0, 0, 0x3c); // no change in hue, 0 sat and random brightness +/- 60
+569	        }
+570	        
+</Source>
+      </BreakPoint>
+    </BreakPoints>
+  </Program>
+</VisualMicro>

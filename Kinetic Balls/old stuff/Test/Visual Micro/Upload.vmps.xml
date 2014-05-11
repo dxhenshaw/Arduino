@@ -1,0 +1,198 @@
+<VisualMicro>
+  <Program Name="Balls_June_2013" Ext=".ino" Location="\\SERVER\Data\Arduino\Kinetic Balls\Balls_June_2013">
+    <Compile CompilerErrors="0" ConfigurationName="Debug" StopOnError="False" OptimiseLibs="True" OptimiseCore="True" BuildPath="C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_June_2013\uno" SketchName="Balls_June_2013" ReportDigitalPins="0" ReportAnalogPins="0" ReportI2C="0" ReportFreeMemory="0" IncludeDebug="1" LastDebugPreProcessorDefinitions="VM_DEBUG;VM_DEBUG_ENABLE 1;VM_DEBUG_BANDWIDTH_THROTTLE_MS 80;VM_DEBUGGER_TYPE_HARDWARESERIAL 0;VM_DEBUGGER_TYPE_SOFTWARESERIAL 1;VM_DEBUGGER_TYPE_FASTSERIAL 2;VM_DEBUGGER_TYPE_USB 3;VM_DEBUGGER_TYPE_TEENSY 4;VM_DEBUGGER_TYPE VM_DEBUGGER_TYPE_HARDWARESERIAL;" IncludesDebug="1" IsCompiled="1" />
+    <Debug RemotePortTransport="HardwareSerial" RemotePortSpeed="9600" LocalPortSpeed="9600" DebugMode="Full" DebugEnabled="1" />
+    <Platform Name="Arduino">
+      <Board Name="uno" Description="Arduino Uno" CoreFolder="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino" VariantFullPath="C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard" McuIdePath="C:\Program Files\arduino-1.0.3" name="Arduino Uno" upload.protocol="arduino" upload.maximum_size="32256" upload.speed="115200" bootloader.low_fuses="0xff" bootloader.high_fuses="0xde" bootloader.extended_fuses="0x05" bootloader.path="optiboot" bootloader.file="optiboot_atmega328.hex" bootloader.unlock_bits="0x3F" bootloader.lock_bits="0x0F" build.mcu="atmega328p" build.f_cpu="16000000L" build.core="arduino" build.variant="standard" runtime.ide.path="C:\Program Files\arduino-1.0.3" build.system.path="C:\Program Files\arduino-1.0.3\hardware\arduino\system" software="ARDUINO" runtime.ide.version="103" build.core.vmresolved="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino" build.core.parentfolder.vmresolved="C:\Program Files\arduino-1.0.3\hardware\arduino\cores" build.core.coresparentfolder.vmresolved="C:\Program Files\arduino-1.0.3\hardware\arduino" vm.core.include="arduino.h" vm.boardsource.path="C:\Program Files\arduino-1.0.3\hardware\arduino" vm.boardsource.name="boards.txt" vm.platformname.name="" build.variant.vmresolved="C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard" compiler.path="C:\Program Files\arduino-1.0.3\hardware\tools\avr\bin\" includes=" -I&quot;C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino&quot;  -I&quot;C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard&quot;  -I&quot;C:\Program Files\Visual Micro\Visual Micro for Arduino\Micro Platforms\Arduino\Templates\Hardware\Debuggers\VM_DBG&quot;  -I&quot;C:\Program Files\arduino-1.0.3\libraries\Wire&quot;  -I&quot;C:\Program Files\arduino-1.0.3\libraries\RealTimeClockDS1307&quot;  -I&quot;C:\Program Files\arduino-1.0.3\libraries\LiquidCrystal_I2C2004V1&quot;  -I&quot;C:\Program Files\arduino-1.0.3\libraries\EEPROM&quot; " build.path="C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_June_2013\uno" build.project_name="Balls_June_2013" build.variant.path="C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard" archive_file="core.a" object_file="&quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_June_2013\uno\EEPROM\EEPROM.cpp.o&quot;" source_file="&quot;C:\Program Files\arduino-1.0.3\libraries\EEPROM\EEPROM.cpp&quot;" object_files="&quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_June_2013\uno\Balls_June_2013.cpp.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_June_2013\uno\VM_DBG\VM_mem_check.c.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_June_2013\uno\VM_DBG\VM_DBG.cpp.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_June_2013\uno\Wire\Wire.cpp.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_June_2013\uno\Wire\utility\twi.c.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_June_2013\uno\RealTimeClockDS1307\RealTimeClockDS1307.cpp.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_June_2013\uno\LiquidCrystal_I2C2004V1\LiquidCrystal_I2C.cpp.o&quot; &quot;C:\Users\David\AppData\Local\VMicro\Arduino\Builds\Balls_June_2013\uno\EEPROM\EEPROM.cpp.o&quot; " />
+    </Platform>
+    <VCCodeModel>
+      <VCCodeMacros />
+    </VCCodeModel>
+    <BreakPoints>
+      <BreakPoint Index="1" Name="Balls_June_2013.ino, line 799" Id="d0321e20-401c-480b-8a8a-b1de728cc895" Enabled="0" Message="Light Show: {i}: colors {lightColor1} &amp; {lightColor2}" MessageTextType="0" PreProcessedMessage="Light Show: {0}: colors {1} &amp; {2}" Condition="" ConditionType="1" CurrentHits="0" File="\\SERVER\Data\Arduino\Kinetic Balls\Balls_June_2013\Balls_June_2013.ino" FileLine="799" FileColumn="1" FunctionName="randomLightShow(byte i)" FunctionLineOffset="9" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='d0321e20-401c-480b-8a8a-b1de728cc895'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
+        <Source>792	 int lightSpeed = 0;
+793	 byte lightColor1;
+794	 byte lightColor2;
+795	 lightSpeed = random(50,200);
+796	 lightColor1 = random(0,9); // between colors 0 and 8
+797	 lightColor2 = random(0,8); // between colors 0 and 7 (excludes 8=black)
+798	 
+--&gt;799	 BlinkM_stopScript( allBlinkMs );    // stop all scripts from playing
+800	 
+801	 switch (i) {  // 
+802	
+803	        case 0:    //
+804	          christmasLights(250, lightColor1, lightColor2, 10);
+805	        break; 
+806	       
+807	        case 1:    //
+808	          curtainsOut(lightSpeed, lightColor1, lightColor2);        
+</Source>
+        <MessageVariables>
+          <MessageVariable Name="i" Index="1" />
+          <MessageVariable Name="lightColor1" Index="2" />
+          <MessageVariable Name="lightColor2" Index="3" />
+        </MessageVariables>
+      </BreakPoint>
+      <BreakPoint Index="2" Name="Balls_June_2013.ino, line 1044" Id="999dd5d6-647a-4f92-88ba-1144633c4f60" Enabled="0" Message="loopCounter = {loopCounter}" MessageTextType="0" PreProcessedMessage="loopCounter = {0}" Condition="" ConditionType="1" CurrentHits="0" File="\\SERVER\Data\Arduino\Kinetic Balls\Balls_June_2013\Balls_June_2013.ino" FileLine="1044" FileColumn="1" FunctionName="" FunctionLineOffset="1" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='999dd5d6-647a-4f92-88ba-1144633c4f60'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
+        <Source>1037	    displayFullTime();                           // display the new time
+1038	    prevSeconds = RTC.getSeconds();              // save for next time round
+1039	    moveTo();
+1040	    printStatusMessage(msgUseDial);}     
+1041	}
+1042	//------------------------------------   
+1043	//Go to any point - based on currentIndex [motor#][0] go to targetIndex [motor#][1] 
+--&gt;1044	void moveTo() {
+1045	  Serial.println("@MoveTo");
+1046	              for (int i=0 ; i &lt; 10; i++) {   // display all motor currentIndex, targetIndex
+1047	              Serial.print(i);
+1048	              Serial.print("=");
+1049	              Serial.print(motor[i][motorCurrentIndex]);
+1050	              Serial.print(" &gt; ");
+1051	              Serial.println(motor[i][motorTargetIndex]);
+1052	            }
+1053	  
+</Source>
+        <MessageVariables>
+          <MessageVariable Name="loopCounter" Index="1" />
+        </MessageVariables>
+      </BreakPoint>
+      <BreakPoint Index="3" Name="Balls_June_2013.ino, line 1302" Id="f02b4b12-603f-4142-8fcd-cd3aaa65ed22" Enabled="0" Message="Recal all to ceiling" MessageTextType="0" PreProcessedMessage="Recal all to ceiling" Condition="" ConditionType="1" CurrentHits="0" File="\\SERVER\Data\Arduino\Kinetic Balls\Balls_June_2013\Balls_June_2013.ino" FileLine="1302" FileColumn="1" FunctionName="recalibrate()" FunctionLineOffset="14" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='f02b4b12-603f-4142-8fcd-cd3aaa65ed22'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
+        <Source>1295	  printStatusMessage(msgRecalibrate);
+1296	  ballFadeTo(allBlinkMs, yellow);
+1297	
+1298	  //first, go to what we think of is the ceiling
+1299		for (int i=0 ; i &lt; 10; i++) {   // assign value to all motor targetIndex
+1300			motor[i][motorTargetIndex] = ceilingIndex;
+1301	             };
+--&gt;1302	  moveTo(); // now go to the ceiling
+1303	
+1304	  // next, for each ball in turn, do a recalibration
+1305		for (int i=0 ; i &lt; 10; i++) {   // assign value to all motor targetIndex
+1306					motor[i][motorCurrentIndex] = (floorIndex + 5);	// limit rewind amount
+1307					motor[i][motorTargetIndex] = 0;
+1308					ballFadeTo(i+1, yellow);
+1309					moveTo();               // go as high as we can till we hit the switch
+1310					ballFadeTo(i+1, blue);
+1311					motor[i][motorTargetIndex] = ceilingIndex;
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="4" Name="Balls_June_2013.ino, line 1309" Id="caef3d75-e3e4-484c-aee1-57e666ef4b3a" Enabled="0" Message="Recal move ball {i} to 0" MessageTextType="0" PreProcessedMessage="Recal move ball {0} to 0" Condition="" ConditionType="1" CurrentHits="0" File="\\SERVER\Data\Arduino\Kinetic Balls\Balls_June_2013\Balls_June_2013.ino" FileLine="1309" FileColumn="1" FunctionName="recalibrate()" FunctionLineOffset="21" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='caef3d75-e3e4-484c-aee1-57e666ef4b3a'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
+        <Source>1302	  moveTo(); // now go to the ceiling
+1303	
+1304	  // next, for each ball in turn, do a recalibration
+1305		for (int i=0 ; i &lt; 10; i++) {   // assign value to all motor targetIndex
+1306					motor[i][motorCurrentIndex] = (floorIndex + 5);	// limit rewind amount
+1307					motor[i][motorTargetIndex] = 0;
+1308					ballFadeTo(i+1, yellow);
+--&gt;1309					moveTo();               // go as high as we can till we hit the switch
+1310					ballFadeTo(i+1, blue);
+1311					motor[i][motorTargetIndex] = ceilingIndex;
+1312					moveTo();
+1313	             };
+1314	 
+1315	  //xxx add error code if we leave this and didn't see the ball
+1316	  
+1317	  //printStatusMessage(msgCeiling);
+1318	  //           for (int i=0 ; i &lt; 10; i++) {   // assign value to all motor targetIndex
+</Source>
+        <MessageVariables>
+          <MessageVariable Name="i" Index="1" />
+        </MessageVariables>
+      </BreakPoint>
+      <BreakPoint Index="5" Name="Balls_June_2013.ino, line 1312" Id="eecfa166-5cfa-4790-9518-5aedbfc8d46c" Enabled="0" Message="Recal move ball {i} to ceiling" MessageTextType="0" PreProcessedMessage="Recal move ball {0} to ceiling" Condition="" ConditionType="1" CurrentHits="0" File="\\SERVER\Data\Arduino\Kinetic Balls\Balls_June_2013\Balls_June_2013.ino" FileLine="1312" FileColumn="1" FunctionName="recalibrate()" FunctionLineOffset="24" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='eecfa166-5cfa-4790-9518-5aedbfc8d46c'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
+        <Source>1305		for (int i=0 ; i &lt; 10; i++) {   // assign value to all motor targetIndex
+1306					motor[i][motorCurrentIndex] = (floorIndex + 5);	// limit rewind amount
+1307					motor[i][motorTargetIndex] = 0;
+1308					ballFadeTo(i+1, yellow);
+1309					moveTo();               // go as high as we can till we hit the switch
+1310					ballFadeTo(i+1, blue);
+1311					motor[i][motorTargetIndex] = ceilingIndex;
+--&gt;1312					moveTo();
+1313	             };
+1314	 
+1315	  //xxx add error code if we leave this and didn't see the ball
+1316	  
+1317	  //printStatusMessage(msgCeiling);
+1318	  //           for (int i=0 ; i &lt; 10; i++) {   // assign value to all motor targetIndex
+1319	  //             motor[i][motorTargetIndex] = ceilingIndex;
+1320	  //           };
+1321	  //moveTo(); //
+</Source>
+        <MessageVariables>
+          <MessageVariable Name="i" Index="1" />
+        </MessageVariables>
+      </BreakPoint>
+      <BreakPoint Index="6" Name="Balls_June_2013.ino, line 732" Id="1b4f3f10-b2b5-41a6-94d3-56b82e3572d3" Enabled="1" Message="@pwmMotor {offDuty},{onDuty}" MessageTextType="0" PreProcessedMessage="@pwmMotor {0},{1}" Condition="" ConditionType="1" CurrentHits="0" File="\\SERVER\Data\Arduino\Kinetic Balls\Balls_June_2013\Balls_June_2013.ino" FileLine="732" FileColumn="1" FunctionName="" FunctionLineOffset="1" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='1b4f3f10-b2b5-41a6-94d3-56b82e3572d3'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
+        <Source>725	    lcd.print("&lt;&lt;&lt;"); //indicate to user it has been pushed
+726	    selectedMenuItem = activeMenuSelection;
+727	    BlinkM_stopScript( allBlinkMs );   // turn off any script currently playing
+728	  }
+729	}  // end of loop
+730	
+731	//------------------------------------
+--&gt;732	void pwmMotor(byte motor, byte offDuty, byte onDuty, byte loops, boolean overRide = false){
+733	
+734			  for (byte i = 0; i &lt; loops; i++) {			  
+735				  setRegisterPin((3*motor), LOW );           // OFF
+736				  writeRegisters();
+737				  delay(offDuty);
+738				  setRegisterPin((3*motor), HIGH );           // ON
+739				  writeRegisters();
+740	
+741				  pinValues165 = read_shift_regs165();		// read 165 shift registers
+</Source>
+        <MessageVariables>
+          <MessageVariable Name="offDuty" Index="1" />
+          <MessageVariable Name="onDuty" Index="2" />
+        </MessageVariables>
+      </BreakPoint>
+      <BreakPoint Index="7" Name="Balls_June_2013.ino, line 1106" Id="8fb96594-4d80-4183-b30d-5f207fbd1766" Enabled="1" Message="Moving ball {i}" MessageTextType="0" PreProcessedMessage="Moving ball {0}" Condition="" ConditionType="1" CurrentHits="0" File="\\SERVER\Data\Arduino\Kinetic Balls\Balls_June_2013\Balls_June_2013.ino" FileLine="1106" FileColumn="1" FunctionName="moveBall()" FunctionLineOffset="19" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='8fb96594-4d80-4183-b30d-5f207fbd1766'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
+        <Source>1099	    if (maximumDelta &lt; motor[i][motorDeltaMoves]) maximumDelta = motor[i][motorDeltaMoves]; // set maximum
+1100	    //setRegisterPin((3*i),HIGH);          // enable motor bit in shift register
+1101	  } }
+1102		
+1103		printStatusMessage(msgMoving); 
+1104	
+1105		for (int i=0 ; i &lt; 10; i++) {	// assess motors 0 thru 9 in turn
+--&gt;1106			if (motor[i][motorDeltaMoves] != 0) { // if deltamoves != 0, then we are going to move this motor
+1107				ballGoTo((i+1), white);
+1108				// ramp up the motor
+1109				pwmMotor(i, 25,  5, 30);												// slow @ 25%
+1110				if (switchValue[i] == false) pwmMotor(i, 13, 13, 20);					// medium @ 50%
+1111				if (switchValue[i] == false) pwmMotor(i,  5, 25, 10);					// fast @ 75%
+1112	
+1113				// go at full speed				
+1114				while ((motor[i][motorDeltaMoves] != 0) &amp;&amp; (switchValue[i] == false)) {// continue while moves != 0 &amp; switch is false {
+1115					lcd.setCursor(17,3);
+</Source>
+        <MessageVariables>
+          <MessageVariable Name="i" Index="1" />
+        </MessageVariables>
+      </BreakPoint>
+      <BreakPoint Index="8" Name="Balls_June_2013.ino, line 1129" Id="782eba36-df64-4b76-a6af-2ea60b3e29c7" Enabled="1" Message="Reversing {i}" MessageTextType="0" PreProcessedMessage="Reversing {0}" Condition="" ConditionType="1" CurrentHits="0" File="\\SERVER\Data\Arduino\Kinetic Balls\Balls_June_2013\Balls_June_2013.ino" FileLine="1129" FileColumn="1" FunctionName="moveBall()" FunctionLineOffset="41" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='782eba36-df64-4b76-a6af-2ea60b3e29c7'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
+        <Source>1122				if (switchValue[i] == false) pwmMotor(i,  5, 25, 10);					// fast
+1123				pwmMotor(i, 13, 13, 10, true);											// medium
+1124				pwmMotor(i, 25,  5, 20, true);											// slow (gets called if recalibration point is reached - mandatory)
+1125	
+1126				setRegisterPin((3*i), LOW );		        // ensure motor is OFF
+1127				writeRegisters();
+1128				
+--&gt;1129				if (switchValue[i] == true)  {	// we are at recalibration point and need to unwind				 
+1130					  ballGoTo((i+1), red);
+1131					  pauseTime(1);								// small delay before we reverse
+1132					  motorDirectionDown(i);                  // motor will begin to go down
+1133					  do {
+1134						  pwmMotor(i, 25,  5, 30, true);				// go down slowly
+1135					  } while (switchValue[i] == true);
+1136				
+1137					setRegisterPin((3*i), LOW );		        // ensure motor is OFF
+1138					writeRegisters();
+</Source>
+        <MessageVariables>
+          <MessageVariable Name="i" Index="1" />
+        </MessageVariables>
+      </BreakPoint>
+    </BreakPoints>
+  </Program>
+</VisualMicro>
