@@ -2,6 +2,7 @@
 // v1 - 03/14 - Includes basic animation and transitions
 // v2 - 04/14 - Improvements to animations
 // world 6:31pm
+// comment at 6:42
 
 #include <Adafruit_GFX.h>
 #include <Adafruit_NeoMatrix.h>
