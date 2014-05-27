@@ -41,7 +41,9 @@ void setup() {
 void loop() {
 	matrix.fillScreen(0);					// start with a blank screen
 	runAnimation(calculateNextAnimation());	// run the animation
-	//runAnimation(9);
+	//runAnimation(19);
+	//populateAnimationQueue();
+	//calculateNextAnimation();
 	runTransition(random(0,5));				// run a random transition from 0 thru 4
 }
 
@@ -712,7 +714,7 @@ void calculateNewOffsets(int angle){
 					break;
 				case 90:
 					xOffset =  1;
-					yOffset =  0;
+					yOffset =  random(-1,1); // was 0;
 					break;
 				case 135:
 					xOffset =  1;

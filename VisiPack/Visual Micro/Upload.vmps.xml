@@ -20,33 +20,16 @@
 --&gt;41	void loop() {
 42		matrix.fillScreen(0);					// start with a blank screen
 43		runAnimation(calculateNextAnimation());	// run the animation
-44		//runAnimation(9);
-45		runTransition(random(0,5));				// run a random transition from 0 thru 4
-46	}
-47	
-48	void runAnimation(byte animation) {					// run animation based on value of byte passed in
-49		switch (animation) {
-50		case 0:
+44		//runAnimation(19);
+45		//populateAnimationQueue();
+46		//calculateNextAnimation();
+47		runTransition(random(0,5));				// run a random transition from 0 thru 4
+48	}
+49	
+50	void runAnimation(byte animation) {					// run animation based on value of byte passed in
 </Source>
         <MessageVariables>
           <MessageVariable Name="millis()" Index="1" />
-        </MessageVariables>
-      </BreakPoint>
-      <BreakPoint Index="2" Name="VisiPack.ino, line 801" Id="53bc4462-0bf6-456d-97c6-c76defba4d96" Enabled="1" Message="aQ[{i}] = {animationQueue[i]}" MessageTextType="0" PreProcessedMessage="aQ[{0}] = {1}" Condition="" ConditionType="1" CurrentHits="0" File="s:\arduino\visipack\visipack.ino" FileLine="801" FileColumn="1" FunctionName="populateAnimationQueue()" FunctionLineOffset="9" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='53bc4462-0bf6-456d-97c6-c76defba4d96'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
-        <Source>794		for (byte i = 0; i &lt; numberAnimations; i++) {	// first insert values into the array
-795			animationQueue[i] = i;
-796		}
-797		for (byte i = 0; i &lt; numberAnimations; i++) {	// now shuffle the array
-798			byte pos = random(i, numberAnimations);		// between 0 and max animations - 1
-799			byte t = animationQueue[i];   
-800			animationQueue[i] = animationQueue[pos];
---&gt;801			animationQueue[pos] = t;
-802		}
-803	}
-</Source>
-        <MessageVariables>
-          <MessageVariable Name="i" Index="1" />
-          <MessageVariable Name="animationQueue[i]" Index="2" />
         </MessageVariables>
       </BreakPoint>
     </BreakPoints>
