@@ -1,5 +1,5 @@
 /*
- * Kinetic Balls -- David Henshaw, December 2012-
+ * Kinetic Balls -- David Henshaw, December 2012-January 2014
  * v9-999 - Hundreds of other changes thru Janury 2014
  * v8 - Multiple changes around unit motors and the programs - 5/6/13
  * v7 - Logic to handle switch code for 10 units - 4/23/13
@@ -241,8 +241,8 @@ void setup()
 	ceilingIndex = EEPROM.read( ceilingIndex_EEPROM );              
 	floorIndex =   EEPROM.read( floorIndex_EEPROM );
   
-  /*RTC.setHours(11);   //At startup: set time - TEST CODE ONLY
-  RTC.setMinutes(56);
+  /*RTC.setHours(11);		// At startup: set time - TEST CODE ONLY
+  RTC.setMinutes(56);		// Note: Resetting time can help fix RTC clock errors
   RTC.setClock();*/ 		
 } 
 //------------------------------------

@@ -13,6 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="_core">
+      <UniqueIdentifier>{de2a6163-0a55-48dc-9dd4-940c42502a60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_libraries">
+      <UniqueIdentifier>{44ed646f-5785-4bb0-9a5a-a6e0f7c591e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_libraries\Wire">
+      <UniqueIdentifier>{d39d4edf-f1a0-4782-91ff-eb89af0f70c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_libraries\RealTimeClockDS1307">
+      <UniqueIdentifier>{eae04634-d396-4b90-b872-12b9f2aca9be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_libraries\EEPROM">
+      <UniqueIdentifier>{196b3c2d-e748-4db8-9be8-ae30f2b40499}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Balls_July_2013.ino" />
@@ -28,5 +43,136 @@
     <ClInclude Include="LiquidCrystal_I2C.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Arduino.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\binary.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Client.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\HardwareSerial.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\IPAddress.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\new.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Platform.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Print.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Printable.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Server.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Stream.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Udp.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\USBAPI.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\USBCore.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\USBDesc.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\WCharacter.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\wiring_private.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\WString.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard\pins_arduino.h">
+      <Filter>_core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\libraries\Wire\Wire.h">
+      <Filter>_libraries\Wire</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\libraries\RealTimeClockDS1307\RealTimeClockDS1307.h">
+      <Filter>_libraries\RealTimeClockDS1307</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\libraries\EEPROM\EEPROM.h">
+      <Filter>_libraries\EEPROM</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\CDC.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\HardwareSerial.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\HID.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\IPAddress.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\main.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\new.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Print.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Stream.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Tone.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\USBCore.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\WInterrupts.c">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\wiring.c">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\wiring_analog.c">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\wiring_digital.c">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\wiring_pulse.c">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\wiring_shift.c">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\WMath.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\WString.cpp">
+      <Filter>_core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\libraries\Wire\Wire.cpp">
+      <Filter>_libraries\Wire</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\libraries\RealTimeClockDS1307\RealTimeClockDS1307.cpp">
+      <Filter>_libraries\RealTimeClockDS1307</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\libraries\EEPROM\EEPROM.cpp">
+      <Filter>_libraries\EEPROM</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

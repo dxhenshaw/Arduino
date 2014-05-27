@@ -41,10 +41,10 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino;C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard;C:\Program Files\arduino-1.0.3\libraries\Wire;C:\Program Files\arduino-1.0.3\libraries\Wire\utility;C:\Program Files\arduino-1.0.3\libraries\RealTimeClockDS1307;C:\Program Files\arduino-1.0.3\libraries\RealTimeClockDS1307\utility;C:\Program Files\arduino-1.0.3\libraries\LiquidCrystal_I2C2004V1;C:\Program Files\arduino-1.0.3\libraries\LiquidCrystal_I2C2004V1\utility;C:\Program Files\arduino-1.0.3\libraries\EEPROM;C:\Program Files\arduino-1.0.3\libraries\EEPROM\utility;c:\program files\arduino-1.0.3\hardware\tools\avr\avr\include\;c:\program files\arduino-1.0.3\hardware\tools\avr\avr\include\avr\;c:\program files\arduino-1.0.3\hardware\tools\avr\avr\;c:\program files\arduino-1.0.3\hardware\tools\avr\lib\gcc\avr\4.3.2\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>\\SERVER\Data\Arduino\Kinetic Balls\Balls_July_2013\Visual Micro\.Balls_July_2013.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino;C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard;C:\Program Files\arduino-1.0.3\libraries\Wire;C:\Program Files\arduino-1.0.3\libraries\Wire\utility;C:\Program Files\arduino-1.0.3\libraries\RealTimeClockDS1307;C:\Program Files\arduino-1.0.3\libraries\RealTimeClockDS1307\utility;C:\Program Files\arduino-1.0.3\libraries\EEPROM;C:\Program Files\arduino-1.0.3\libraries\EEPROM\utility;C:\Program Files\arduino-1.0.3\libraries;C:\Program Files\arduino-1.0.3\hardware\arduino\libraries;C:\Program Files\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers;C:\Users\David\Documents\Arduino\libraries;c:\program files\arduino-1.0.3\hardware\tools\avr\avr\include\;c:\program files\arduino-1.0.3\hardware\tools\avr\avr\include\avr\;c:\program files\arduino-1.0.3\hardware\tools\avr\avr\;c:\program files\arduino-1.0.3\hardware\tools\avr\lib\gcc\avr\4.3.2\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>S:\Arduino\Kinetic Balls\Balls_July_2013\Visual Micro\.Balls_July_2013.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
-      <PreprocessorDefinitions>__AVR_ATmega328P__;_VMDEBUG=1;ARDUINO=103;ARDUINO_MAIN;__AVR__;F_CPU=16000000L;__cplusplus;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__AVR_ATmega328p__;__AVR_ATmega328P__;_VMDEBUG=1;ARDUINO=103;ARDUINO_MAIN;__AVR__;__avr__;F_CPU=16000000L;__cplusplus;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -78,12 +78,62 @@
     <ClInclude Include="BlinkM_funcs.h">
       <FileType>CppCode</FileType>
     </ClInclude>
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Arduino.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\binary.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Client.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\HardwareSerial.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\IPAddress.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\new.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Platform.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Print.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Printable.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Server.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Stream.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Udp.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\USBAPI.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\USBCore.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\USBDesc.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\WCharacter.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\wiring_private.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\WString.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard\pins_arduino.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\libraries\EEPROM\EEPROM.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\libraries\RealTimeClockDS1307\RealTimeClockDS1307.h" />
+    <ClInclude Include="C:\Program Files\arduino-1.0.3\libraries\Wire\Wire.h" />
     <ClInclude Include="LiquidCrystal_I2C.h">
       <FileType>CppCode</FileType>
     </ClInclude>
     <ClInclude Include="Visual Micro\.Balls_July_2013.vsarduino.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\CDC.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\HardwareSerial.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\HID.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\IPAddress.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\main.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\new.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Print.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Stream.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\Tone.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\USBCore.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\WInterrupts.c" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\wiring.c" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\wiring_analog.c" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\wiring_digital.c" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\wiring_pulse.c" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\wiring_shift.c" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\WMath.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\WString.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\libraries\EEPROM\EEPROM.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\libraries\RealTimeClockDS1307\RealTimeClockDS1307.cpp" />
+    <ClCompile Include="C:\Program Files\arduino-1.0.3\libraries\Wire\Wire.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties arduino.upload.port="COM7" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

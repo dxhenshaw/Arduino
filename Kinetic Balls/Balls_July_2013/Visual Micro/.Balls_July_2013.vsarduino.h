@@ -100,5 +100,6 @@ void updateEncoder();
 #include "C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard\pins_arduino.h" 
 #include "S:\Arduino\Kinetic Balls\Balls_July_2013\Balls_July_2013.ino"
 #include "S:\Arduino\Kinetic Balls\Balls_July_2013\BlinkM_funcs.h"
+#include "S:\Arduino\Kinetic Balls\Balls_July_2013\LiquidCrystal_I2C.cpp"
 #include "S:\Arduino\Kinetic Balls\Balls_July_2013\LiquidCrystal_I2C.h"
 #endif
