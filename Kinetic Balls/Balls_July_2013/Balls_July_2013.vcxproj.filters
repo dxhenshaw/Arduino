@@ -174,5 +174,8 @@
     <ClCompile Include="C:\Program Files\arduino-1.0.3\libraries\EEPROM\EEPROM.cpp">
       <Filter>_libraries\EEPROM</Filter>
     </ClCompile>
+    <ClCompile Include="LiquidCrystal_I2C.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

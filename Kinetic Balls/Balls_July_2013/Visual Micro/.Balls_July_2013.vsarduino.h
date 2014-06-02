@@ -95,6 +95,7 @@ unsigned int read_shift_regs165();
 void getMessage(byte index);
 void scanfunc( byte addr, byte result );
 void updateEncoder();
+void pauseForTime(int k, boolean preventRandomLightShow);
 
 #include "C:\Program Files\arduino-1.0.3\hardware\arduino\cores\arduino\arduino.h"
 #include "C:\Program Files\arduino-1.0.3\hardware\arduino\variants\standard\pins_arduino.h" 

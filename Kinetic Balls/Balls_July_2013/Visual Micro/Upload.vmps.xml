@@ -9,27 +9,139 @@
       <VCCodeMacros />
     </VCCodeModel>
     <BreakPoints>
-      <BreakPoint Index="1" Name="Balls_July_2013.ino, line 291" Id="362e7acf-b154-4f8f-9744-d7c268969a55" Enabled="1" Message="{millis()}" MessageTextType="2" PreProcessedMessage="{0}" Condition="millis()&gt;0 || millis()&gt;1" ConditionType="1" CurrentHits="0" File="s:\arduino\kinetic balls\balls_july_2013\balls_july_2013.ino" FileLine="291" FileColumn="1" FunctionName="" FunctionLineOffset="1" FunctionColumnOffset="1" HitCountTarget="250" HitCountType="4" Language="C++" LocationType="3" Tag="&lt;vmbp Id='362e7acf-b154-4f8f-9744-d7c268969a55'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>284				BlinkM_fadeToRandomRGB( unit + 1 , 0xff, 0xff, 0xff);	// set a random color
-285			}
-286	    }
-287	
-288	    if (dialHasTurned() == true) break;								// exit when dial has turned.
-289	  } 
-290	}
---&gt;291	void loop() {
-292	showTime();
-293	
-294	//menu selection  
-295	if (abs(lastEncoderValue - encoderValue) &gt; encoderGap) {  //menu selection has changed
-296	  if (encoderValue &gt; lastEncoderValue) {                  //figure out what the new menu selection is
-297	    activeMenuSelection ++;                               // add 1 to menu
-298	    if (activeMenuSelection &gt; maxMenuItems) activeMenuSelection = 0;
-299	  }else{ 
-300	    activeMenuSelection --;                               // subtract 1 from menu
+      <BreakPoint Index="1" Name="Balls_July_2013.ino, line 292" Id="362e7acf-b154-4f8f-9744-d7c268969a55" Enabled="1" Message="{millis()}" MessageTextType="2" PreProcessedMessage="{0}" Condition="millis()&gt;0 || millis()&gt;1" ConditionType="1" CurrentHits="0" File="s:\arduino\kinetic balls\balls_july_2013\balls_july_2013.ino" FileLine="292" FileColumn="1" FunctionName="" FunctionLineOffset="1" FunctionColumnOffset="1" HitCountTarget="250" HitCountType="4" Language="C++" LocationType="3" Tag="&lt;vmbp Id='362e7acf-b154-4f8f-9744-d7c268969a55'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>285				BlinkM_fadeToRandomRGB( unit + 1 , 0xff, 0xff, 0xff);	// set a random color
+286			}
+287	    }
+288	
+289	    if (dialHasTurned() == true) break;								// exit when dial has turned.
+290	  } 
+291	}
+--&gt;292	void loop() {
+293	showTime();
+294	byte z; // used for debugging below
+295	
+296	//menu selection  
+297	if (abs(lastEncoderValue - encoderValue) &gt; encoderGap) {  //menu selection has changed
+298	  if (encoderValue &gt; lastEncoderValue) {                  //figure out what the new menu selection is
+299	    activeMenuSelection ++;                               // add 1 to menu
+300	    if (activeMenuSelection &gt; maxMenuItems) activeMenuSelection = 0;
+301	  }else{ 
 </Source>
         <MessageVariables>
           <MessageVariable Name="millis()" Index="1" />
+        </MessageVariables>
+      </BreakPoint>
+      <BreakPoint Index="2" Name="Balls_July_2013.ino, line 511" Id="2379b4bd-42d6-4800-9a6c-7e48c415be15" Enabled="1" Message="Pause: {programPauseTime}" MessageTextType="0" PreProcessedMessage="Pause: {0}" Condition="" ConditionType="1" CurrentHits="0" File="s:\arduino\kinetic balls\balls_july_2013\balls_july_2013.ino" FileLine="511" FileColumn="1" FunctionName="loop()" FunctionLineOffset="220" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='2379b4bd-42d6-4800-9a6c-7e48c415be15'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
+        <Source>504			  z = random(0,maxLightShows+1);
+505			  lcd.setCursor(0,2);
+506			  lcd.print(z);
+507			  lcd.print(" ");
+508	       randomLightShow(z);						// do something flashy
+509	       randomLightShow(7);												// then play a random script 
+510	       programPauseTime = random(minPauseTime, maxPauseTime);			// in seconds - wait
+--&gt;511	       pauseTime(programPauseTime); 
+512	       break;
+513	       
+514	      case 7:  // "Romantic"
+515	       recalibrate();
+516	       sineFrequency = random(1,11);								// pick a random sine wave multiplier from 1 to 10
+517	       sineFrequency = sineFrequency/10;							// convert to a number between 0.1 and 1.0 xxx merge with previous wave code
+518	       loopCounter = 1;												// same as "current step"
+519	       pointA = calculateSinPosition(loopCounter, sineFrequency);	// pointA is the value for unit 10 xxx merge
+520	       
+</Source>
+        <MessageVariables>
+          <MessageVariable Name="programPauseTime" Index="1" />
+        </MessageVariables>
+      </BreakPoint>
+      <BreakPoint Index="3" Name="Balls_July_2013.ino, line 1075" Id="8253c2fe-699a-4204-a316-1e5123b94aed" Enabled="1" Message="sB: {z}" MessageTextType="0" PreProcessedMessage="sB: {0}" Condition="" ConditionType="1" CurrentHits="0" File="s:\arduino\kinetic balls\balls_july_2013\balls_july_2013.ino" FileLine="1075" FileColumn="1" FunctionName="randomLightShow(byte i)" FunctionLineOffset="46" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='8253c2fe-699a-4204-a316-1e5123b94aed'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
+        <Source>1068	          flashAll(lightSpeed, lightColor1, lightColor2);
+1069	        break; 
+1070	
+1071	        case 7:    // play a random script between script 10 and 16 inclusive
+1072	          z = random(10,17);
+1073			  lcd.setCursor(5,2); // for debugging
+1074			  lcd.print(z);
+--&gt;1075			  BlinkM_playScript(scriptAllBlinkMs,z, 0, 0); //   Args: blinkM addr, script#, 0=repeat forever, 0=play from beginning      
+1076	
+1077	        break; 
+1078	
+1079	        case 8:    //
+1080	          BlinkM_fadeToRandomRGB(scriptAllBlinkMs, 0xff, 0xff, 0xff);      // set a random color        
+1081	        break; 
+1082	
+1083	        case 9:    //
+1084	          fadeRight(lightSpeed, lightColor1, lightColor2);        
+</Source>
+        <MessageVariables>
+          <MessageVariable Name="z" Index="1" />
+        </MessageVariables>
+      </BreakPoint>
+      <BreakPoint Index="4" Name="Balls_July_2013.ino, line 508" Id="98e9751f-e0a5-4136-ab6e-b102145f76c0" Enabled="1" Message="sA: {z}" MessageTextType="0" PreProcessedMessage="sA: {0}" Condition="" ConditionType="1" CurrentHits="0" File="s:\arduino\kinetic balls\balls_july_2013\balls_july_2013.ino" FileLine="508" FileColumn="1" FunctionName="loop()" FunctionLineOffset="217" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='98e9751f-e0a5-4136-ab6e-b102145f76c0'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
+        <Source>501	        
+502	      case 6:  // Light show 
+503		   // setUpChandelier();												// adopt chandelier shape xxx add back in!
+504			  z = random(0,maxLightShows+1);
+505			  lcd.setCursor(0,2);
+506			  lcd.print(z);
+507			  lcd.print(" ");
+--&gt;508	       randomLightShow(z);						// do something flashy
+509	       randomLightShow(7);												// then play a random script 
+510	       programPauseTime = random(minPauseTime, maxPauseTime);			// in seconds - wait
+511	       pauseTime(programPauseTime); 
+512	       break;
+513	       
+514	      case 7:  // "Romantic"
+515	       recalibrate();
+516	       sineFrequency = random(1,11);								// pick a random sine wave multiplier from 1 to 10
+517	       sineFrequency = sineFrequency/10;							// convert to a number between 0.1 and 1.0 xxx merge with previous wave code
+</Source>
+        <MessageVariables>
+          <MessageVariable Name="z" Index="1" />
+        </MessageVariables>
+      </BreakPoint>
+      <BreakPoint Index="5" Name="Balls_July_2013.ino, line 276" Id="a49c2ad6-0d4a-40db-a057-940f24ec829b" Enabled="1" Message="pT RLS" MessageTextType="0" PreProcessedMessage="pT RLS" Condition="" ConditionType="1" CurrentHits="0" File="s:\arduino\kinetic balls\balls_july_2013\balls_july_2013.ino" FileLine="276" FileColumn="1" FunctionName="pauseTime(int k, boolean preventRandomLightShow = false)" FunctionLineOffset="16" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='98951b11-a684-4aeb-bdf1-d2e7e15fad39'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
+        <Source>269	
+270	    if ( (selectedMenuItem != sleepMenuItem) &amp;&amp;						// if we're not sleeping and
+271			(preventRandomLightShow == false) ) {						// if flag isn't set to prevent a random color change
+272	
+273			if ( (RTC.getMinutes() != prevMinutes) &amp;&amp;					// if one minute has passed
+274				(selectedMenuItem != quietMood) &amp;&amp;
+275				(selectedMenuItem != 13) ) {							// and we're not in Sun/Moon program or white chandelier
+--&gt;276					delay(1);
+277				randomLightShow(random(0,maxLightShows+1));  
+278				prevMinutes = RTC.getMinutes(); }
+279	
+280			// if on average 6 seconds has passed, cause a random pendant to fade to a random color
+281			if ((random(0,6) == 5)) {
+282				byte unit = random(0,10);
+283				BlinkM_stopScript( unit + 1 );							// turn off any script currently playing
+284				ballGoTo ( unit, black );
+285				BlinkM_fadeToRandomRGB( unit + 1 , 0xff, 0xff, 0xff);	// set a random color
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="6" Name="Balls_July_2013.ino, line 282" Id="6359f714-9937-407b-9b90-e7dd2775179c" Enabled="1" Message="pT Stop {unit}" MessageTextType="0" PreProcessedMessage="pT Stop {0}" Condition="" ConditionType="1" CurrentHits="0" File="s:\arduino\kinetic balls\balls_july_2013\balls_july_2013.ino" FileLine="282" FileColumn="1" FunctionName="pauseTime(int k, boolean preventRandomLightShow = false)" FunctionLineOffset="22" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='ffe1412d-f3fd-4fab-81cf-4b7445ba34e8'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
+        <Source>275				(selectedMenuItem != 13) ) {							// and we're not in Sun/Moon program or white chandelier
+276					delay(1);
+277				randomLightShow(random(0,maxLightShows+1));  
+278				prevMinutes = RTC.getMinutes(); }
+279	
+280			// if on average 6 seconds has passed, cause a random pendant to fade to a random color
+281			if ((random(0,6) == 5)) {
+--&gt;282				byte unit = random(0,10);
+283				BlinkM_stopScript( unit + 1 );							// turn off any script currently playing
+284				ballGoTo ( unit, black );
+285				BlinkM_fadeToRandomRGB( unit + 1 , 0xff, 0xff, 0xff);	// set a random color
+286			}
+287	    }
+288	
+289	    if (dialHasTurned() == true) break;								// exit when dial has turned.
+290	  } 
+291	}
+</Source>
+        <MessageVariables>
+          <MessageVariable Name="unit" Index="1" />
         </MessageVariables>
       </BreakPoint>
     </BreakPoints>

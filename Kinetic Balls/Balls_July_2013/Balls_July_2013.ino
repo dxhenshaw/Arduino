@@ -258,7 +258,7 @@ void randomizeList(byte maxItems = 9) {		// generate a random list of numbers fr
 	};
 }
 //------------------------------------
-void pauseTime(int k, boolean preventRandomLightShow = false) {		// pause for k seconds, including a countdown
+void OldpauseTime(int k, boolean preventRandomLightShow = false) {		// pause for k seconds, including a countdown
   printStatusMessage(msgPause);
   prevMinutes = RTC.getMinutes();
   for (int i=k ; i > 0; i--) {
@@ -273,6 +273,7 @@ void pauseTime(int k, boolean preventRandomLightShow = false) {		// pause for k 
 		if ( (RTC.getMinutes() != prevMinutes) &&					// if one minute has passed
 			(selectedMenuItem != quietMood) &&
 			(selectedMenuItem != 13) ) {							// and we're not in Sun/Moon program or white chandelier
+				delay(1);
 			randomLightShow(random(0,maxLightShows+1));  
 			prevMinutes = RTC.getMinutes(); }
 
@@ -290,6 +291,7 @@ void pauseTime(int k, boolean preventRandomLightShow = false) {		// pause for k 
 }
 void loop() {
 showTime();
+byte z; // used for debugging below
 
 //menu selection  
 if (abs(lastEncoderValue - encoderValue) > encoderGap) {  //menu selection has changed
@@ -324,7 +326,7 @@ if(digitalRead(encoderSwitchPin)){  // check if button has been pushed
 		dropFallingStar(sequenceList[0]);					// drop pendant @ array #0
 
         do {
-			pauseTime(360,true);							// drop a new pendant every 6 mins (360 seconds)
+			pauseForTime(360,true);							// drop a new pendant every 6 mins (360 seconds)
 			if (dialHasTurned() == true) break;
 			if (sleepHour == RTC.getHours()) break;			// because this case code re-enters very infrequently, exit if we're at sleep time
 
@@ -357,7 +359,7 @@ if(digitalRead(encoderSwitchPin)){  // check if button has been pushed
 				moveTo();
 				BlinkM_fadeToRandomRGB(scriptAllBlinkMs, 0xff, 0xff, 0xff);	// set a random color
 				programPauseTime = random(minPauseTime, maxPauseTime);      // in seconds - wait before moving
-				pauseTime(programPauseTime); 
+				pauseForTime(programPauseTime, false); 
 				if (dialHasTurned() == true) break;
            }          
                     
@@ -399,7 +401,7 @@ if(digitalRead(encoderSwitchPin)){  // check if button has been pushed
 		  for (byte i = random(3,6) ; i > 0; i--) {						// some random number of times
 			BlinkM_fadeToRandomRGB(scriptAllBlinkMs, 0xff, 0xff, 0xff);	// set a random color
 			programPauseTime = random(5, minPauseTime);					// in seconds
-			pauseTime(programPauseTime);                                // pause
+			pauseForTime(programPauseTime, false);                                // pause
 			if (dialHasTurned() == true) break;  
 			}                            
 		
@@ -429,7 +431,7 @@ if(digitalRead(encoderSwitchPin)){  // check if button has been pushed
 		 for (byte i = random(5,9) ; i > 0; i--) {						// some random number of times
 			randomLightShow(7);											// play a random script 
 			programPauseTime = random(5, minPauseTime);					// in seconds
-			pauseTime(programPauseTime);                                // pause
+			pauseForTime(programPauseTime, false);                                // pause
 			if (dialHasTurned() == true) break;  
 			}    
          
@@ -489,7 +491,7 @@ if(digitalRead(encoderSwitchPin)){  // check if button has been pushed
 		 for (byte i = random(3,6) ; i > 0; i--) {						// some random number of times
 			BlinkM_fadeToRandomRGB(scriptAllBlinkMs, 0xff, 0xff, 0xff);	// set a random color
 			programPauseTime = random(5, minPauseTime);					// in seconds
-			pauseTime(programPauseTime);                                // pause
+			pauseForTime(programPauseTime, false);                                // pause
 			if (dialHasTurned() == true) break;  
 		}
           if (dialHasTurned() == true) break;
@@ -498,11 +500,16 @@ if(digitalRead(encoderSwitchPin)){  // check if button has been pushed
         break;
         
       case 6:  // Light show 
-    //   setUpChandelier();												// adopt chandelier shape xxx add back in!
-       randomLightShow(random(0,maxLightShows+1));						// do something flashy
+	   // setUpChandelier();												// adopt chandelier shape xxx add back in!
+		  z = random(0,maxLightShows+1);
+		  lcd.setCursor(0,2);
+		  lcd.print(z);
+		  lcd.print(" ");
+       randomLightShow(z);						// do something flashy
        randomLightShow(7);												// then play a random script 
        programPauseTime = random(minPauseTime, maxPauseTime);			// in seconds - wait
-       pauseTime(programPauseTime); 
+       //pauseForTime(programPauseTime); 
+	   pauseForTime(programPauseTime, false);
        break;
        
       case 7:  // "Romantic"
@@ -528,14 +535,14 @@ if(digitalRead(encoderSwitchPin)){  // check if button has been pushed
          for (int i=0 ; i < 9; i++) {								// shift all values to the left by one unit
 			motor[i][motorTargetIndex] = motor[i+1][motorTargetIndex];
 			programPauseTime = random(15, minPauseTime);			// in seconds - wait before moving
-			pauseTime(programPauseTime);							// true = do not allow random light show when minute changes
+			pauseForTime(programPauseTime, false);							// true = do not allow random light show when minute changes
 			curtainsOut(50, yellow, cyan);
 			BlinkM_playScript(scriptAllBlinkMs,12, 0, 0);			// play candles script
 			ballFadeTo(i, white);
 			moveTo();
 			if (dialHasTurned() == true) break;						// line to allow break from loops if dial is turned
 			ballFadeTo(i, black);									// turn this ball off
-			pauseTime(2, true);										// wait 2 seconds
+			pauseForTime(2, true);										// wait 2 seconds
 			BlinkM_playScript( i+1 ,12, 0, 0);						// play candles script
          }
          
@@ -569,7 +576,7 @@ if(digitalRead(encoderSwitchPin)){  // check if button has been pushed
          
 		 for (byte i = random(12,21) ; i > 0; i--) {					// some random number of times (approx 6 to 10 minute loops)
 			transition(random(0,10));									// play random transition xxx check max value
-			pauseTime(1);
+			pauseForTime(1, false);
 			byte scriptNumber = random(0,15);
 
 			clearLine(2);
@@ -581,9 +588,9 @@ if(digitalRead(encoderSwitchPin)){  // check if button has been pushed
 
 			playScript(scriptNumber);									// play a random script  xxx check max value
 			if (scriptNumber < 9) {
-				pauseTime(30);											// pause for a long time
+				pauseForTime(30, false);											// pause for a long time
 			} else { 
-				pauseTime(4);											// pause for a short time
+				pauseForTime(4, false);											// pause for a short time
 			}
 
 			if (dialHasTurned() == true) break;  
@@ -628,7 +635,7 @@ if(digitalRead(encoderSwitchPin)){  // check if button has been pushed
       
       case 10:  // colors
 		  
-		pauseTime(10);	// random color changes
+		pauseForTime(10, false);	// random color changes
 		break;
        
       case 11:  // "Auto Quiet - Sun & Moon" (Not affected by auto sleep)
@@ -638,16 +645,16 @@ if(digitalRead(encoderSwitchPin)){  // check if button has been pushed
 
         if (i > 1) {
 			BlinkM_playScript(scriptAllBlinkMs, i, 0, 0);			// Args: blinkM addr, script#, 0=repeat forever, 0=play from beginning
-			pauseTime(60);											// no rush, let this linger for a minute
+			pauseForTime(60, false);											// no rush, let this linger for a minute
 		}
         
         if (i == 0) {												// if night...
 			setFadeSpeed( fadeSlow );								// default
 			for (int i = 0; i < 10; i++) {
               BlinkM_fadeToHSB((i+1), 43, 0, 0x2d);					// white (43) dim   
-              pauseTime(1, true);
+              pauseForTime(1, true);
               ballFadeTo(i, black);
-              pauseTime(5, true);
+              pauseForTime(5, true);
               if (dialHasTurned() == true) break;
           }
         }
@@ -655,7 +662,7 @@ if(digitalRead(encoderSwitchPin)){  // check if button has been pushed
         if (i == 1) {												// if afternoon...
 			BlinkM_fadeToHSB(scriptAllBlinkMs, 43, 0x00, 0xff);		// white (43) bright      
 			BlinkM_fadeToRandomHSB(scriptAllBlinkMs, 0, 10, 0xc8);	// no change in hue, 0 sat and random brightness +/- 200
-			pauseTime(60);											// no rush, let this linger for a minute
+			pauseForTime(60, false);											// no rush, let this linger for a minute
         }
 		setFadeSpeed( fadeNormal );									// default
 
@@ -688,7 +695,7 @@ if(digitalRead(encoderSwitchPin)){  // check if button has been pushed
 						moveTo();											// go to the specified angular shape
 						if (dialHasTurned() == true) break; 
 						programPauseTime = random(15, minPauseTime);			// in seconds - wait before moving
-						pauseTime(programPauseTime);							// true = do not allow random light show when minute changes
+						pauseForTime(programPauseTime, false);							// true = do not allow random light show when minute changes
 					}
 					if (motor[i][motorCurrentIndex] < motorDestination[i]){ // this motor needs to move down one
 						motor[i][motorTargetIndex] = (motor[i][motorCurrentIndex] + 1);
@@ -698,7 +705,7 @@ if(digitalRead(encoderSwitchPin)){  // check if button has been pushed
 						moveTo();											// go to the specified angular shape
 						if (dialHasTurned() == true) break;
 						programPauseTime = random(15, minPauseTime);			// in seconds - wait before moving
-						pauseTime(programPauseTime);							// true = do not allow random light show when minute changes
+						pauseForTime(programPauseTime, false);							// true = do not allow random light show when minute changes
 					}
 					if (dialHasTurned() == true) break; 
 				}
@@ -717,13 +724,13 @@ if(digitalRead(encoderSwitchPin)){  // check if button has been pushed
 	  case 13:		// white chandelier
 		setUpChandelier();											// adopt chandelier shape
 		ballFadeTo( allBlinkMs , white);
-		pauseTime(5);												// pause with very few random color changes
+		pauseForTime(5, false);												// pause with very few random color changes
 
 	  break;
 
 	  case 14:		// temporary test program
 		playScript(14);
-		pauseTime(5);
+		pauseForTime(5, false);
 		break;
               
       case 18:   // sleep mode
@@ -739,10 +746,10 @@ if(digitalRead(encoderSwitchPin)){  // check if button has been pushed
         do {
           for (int i = 0; i < 10; i++) {
               ballFadeTo(i, white);
-              pauseTime(1, true);
+              pauseForTime(1, true);
 			  if((digitalRead(encoderSwitchPin)) == false) break;	// switch has been pressed
               ballFadeTo(i, black);
-              pauseTime(5, true);
+              pauseForTime(5, true);
               if (dialHasTurned() == true) break;
 			  if((digitalRead(encoderSwitchPin)) == false) break;	// switch has been pressed
           }
@@ -832,7 +839,7 @@ if(digitalRead(encoderSwitchPin)){  // check if button has been pushed
         ballFadeTo(allBlinkMs, red);
 		lcd.init();
 		lcd.noDisplay();											// turn off LCD in case it's garbled
-		pauseTime(1);
+		pauseForTime(1, false);
 		lcd.display();												// turn on LCD
 		printStatusMessage(msgStopped);
 		swipeLeft(150, red, black);
@@ -1023,6 +1030,7 @@ void setUpChandelier() {
 //------------------------------------
 void randomLightShow(byte i) {  
  int lightSpeed = 0;
+ byte z;
  byte lightColor1;
  byte lightColor2;
  lightSpeed = random(50,200);
@@ -1062,7 +1070,11 @@ void randomLightShow(byte i) {
         break; 
 
         case 7:    // play a random script between script 10 and 16 inclusive
-          BlinkM_playScript(scriptAllBlinkMs,(random(10,17)), 0, 0); //   Args: blinkM addr, script#, 0=repeat forever, 0=play from beginning      
+          z = random(10,17);
+		  lcd.setCursor(5,2); // for debugging
+		  lcd.print(z);
+		  BlinkM_playScript(scriptAllBlinkMs,z, 0, 0); //   Args: blinkM addr, script#, 0=repeat forever, 0=play from beginning      
+
         break; 
 
         case 8:    //
@@ -1076,11 +1088,11 @@ void randomLightShow(byte i) {
         case 10:    // custom script
           fadeRight(30, lightColor2, black);  
           ballFadeTo(allBlinkMs, lightColor2); 
-          pauseTime(5);
+          pauseForTime(5, false);
           flashAll(80, white, lightColor2);
           delay(100);   
           flashAll(80, white, lightColor2);   
-          pauseTime(1);     
+          pauseForTime(1, false);     
           for (byte i= random(3,9) ; i > 0; i--) {
             swipeRight(15, white, lightColor1);
             swipeRight(18, white, lightColor2);
@@ -1093,7 +1105,7 @@ void randomLightShow(byte i) {
 
 		case 12: // ten individual white flashes
 			ballFadeTo(allBlinkMs, lightColor2); // prevents fade to black
-			pauseTime(5);
+			pauseForTime(5, false);
 			randomizeColorList();
 			for (int i=0 ; i < 10; i++) { 
 				ballGoTo(sequenceColorList[i], white);   
@@ -1105,7 +1117,7 @@ void randomLightShow(byte i) {
 
 		case 13: // ten multiple white flashes
 			ballFadeTo(allBlinkMs, lightColor2); // prevents fade to black
-			pauseTime(5);
+			pauseForTime(5, false);
 			randomizeColorList();
 			for (int i=0 ; i < 10; i++) {
 				for (int j=0 ; j < random(2,6); j++){
@@ -1267,7 +1279,7 @@ void playScript(byte i) {
 
 		case 12: // ten individual white flashes
 			ballFadeTo(allBlinkMs, lightColor2); // prevents fade to black
-			pauseTime(5);
+			pauseForTime(5, false);
 			randomizeColorList();
 			for (int j=0 ; j < 10; j++) { 
 				ballGoTo(sequenceColorList[j], white);   
@@ -1279,10 +1291,10 @@ void playScript(byte i) {
 
 		case 13: // slow white blob moves right
 			fillIn(lightSpeed, lightColor2);
-			pauseTime(5);
+			pauseForTime(5, false);
 			for (int j=0 ; j < 10; j++) {
 					ballFadeTo(j, white);
-					pauseTime(1, true);
+					pauseForTime(1, true);
 					ballFadeTo(j, lightColor2);
 					delay(350);
 			}
@@ -1290,7 +1302,7 @@ void playScript(byte i) {
 		
 		case 14: // decibel meter
 			fillIn(lightSpeed, lightColor2);
-			pauseTime(1);
+			pauseForTime(1, false);
 
 			byte pendant = 0;
 			byte prevPendant = 0;
@@ -1471,7 +1483,7 @@ void fadeRightSlow(byte speed){
 	for (int i = 0; i < 10; i++) {	
 		BlinkM_fadeToRGB(i+1, r, g, b);				// fade the current ball to the random color
         BlinkM_fadeToRGB(i+2, 0x00, 0x00, 0xff);	// set the next ball to blue
-		pauseTime(speed, true);						// wait with no random color changes
+		pauseForTime(speed, true);						// wait with no random color changes
 		if (dialHasTurned() == true) break; 
     }
 }
@@ -1602,7 +1614,7 @@ void moveBall() { //spin motor so that each ball that needs to moves the right n
 			
 			if (recalibrationFlag == true)  {										// we are at recalibration point and need to unwind				 
 				  ballGoTo(i, red);
-				  pauseTime(1, true);												// small delay before we reverse - flag true to prevent color change
+				  pauseForTime(1, true);												// small delay before we reverse - flag true to prevent color change
 				  motorDirectionDown(i);											// motor will begin to go down
 				  do {
 					  pwmMotor(i, 18,  8, 16, true);								// go down slowly
@@ -1866,4 +1878,36 @@ void updateEncoder(){
   
   if (encoderValue < 1) encoderValue = 99; //prevent negative numbers on menu
   if (encoderValue > 99) encoderValue = 1; //prevent negative numbers on menu
+}
+//------------------------------------
+void pauseForTime(int k, boolean preventRandomLightShow) {		// pause for k seconds, including a countdown
+  printStatusMessage(msgPause);
+  prevMinutes = RTC.getMinutes();
+  for (int i=k ; i > 0; i--) {
+    showTime();
+    lcd.setCursor(17,3);
+    printPositionDigits(i);
+    delay(997);														// pause for almost one second
+
+    if ( (selectedMenuItem != sleepMenuItem) &&						// if we're not sleeping and
+		(preventRandomLightShow == false) ) {						// if flag isn't set to prevent a random color change
+
+		if ( (RTC.getMinutes() != prevMinutes) &&					// if one minute has passed
+			(selectedMenuItem != quietMood) &&
+			(selectedMenuItem != 13) ) {							// and we're not in Sun/Moon program or white chandelier
+				delay(1);
+			randomLightShow(random(0,maxLightShows+1));  
+			prevMinutes = RTC.getMinutes(); }
+
+		// if on average 6 seconds has passed, cause a random pendant to fade to a random color
+		if ((random(0,6) == 5)) {
+			byte unit = random(0,10);
+			BlinkM_stopScript( unit + 1 );							// turn off any script currently playing
+			ballGoTo ( unit, black );
+			BlinkM_fadeToRandomRGB( unit + 1 , 0xff, 0xff, 0xff);	// set a random color
+		}
+    }
+
+    if (dialHasTurned() == true) break;								// exit when dial has turned.
+  } 
 }
