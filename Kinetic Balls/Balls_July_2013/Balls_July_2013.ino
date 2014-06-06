@@ -502,13 +502,12 @@ if(digitalRead(encoderSwitchPin)){  // check if button has been pushed
       case 6:  // Light show 
 	   // setUpChandelier();												// adopt chandelier shape xxx add back in!
 		  z = random(0,maxLightShows+1);
-		  lcd.setCursor(0,2);
-		  lcd.print(z);
-		  lcd.print(" ");
+		  //lcd.setCursor(0,2);
+		  //lcd.print(z);
+		  //lcd.print(" ");
        randomLightShow(z);						// do something flashy
        randomLightShow(7);												// then play a random script 
        programPauseTime = random(minPauseTime, maxPauseTime);			// in seconds - wait
-       //pauseForTime(programPauseTime); 
 	   pauseForTime(programPauseTime, false);
        break;
        
@@ -1071,8 +1070,8 @@ void randomLightShow(byte i) {
 
         case 7:    // play a random script between script 10 and 16 inclusive
           z = random(10,17);
-		  lcd.setCursor(5,2); // for debugging
-		  lcd.print(z);
+		  //lcd.setCursor(5,2); // for debugging
+		  //lcd.print(z);
 		  BlinkM_playScript(scriptAllBlinkMs,z, 0, 0); //   Args: blinkM addr, script#, 0=repeat forever, 0=play from beginning      
 
         break; 
@@ -1895,8 +1894,9 @@ void pauseForTime(int k, boolean preventRandomLightShow) {		// pause for k secon
 		if ( (RTC.getMinutes() != prevMinutes) &&					// if one minute has passed
 			(selectedMenuItem != quietMood) &&
 			(selectedMenuItem != 13) ) {							// and we're not in Sun/Moon program or white chandelier
-				delay(1);
-			randomLightShow(random(0,maxLightShows+1));  
+			//randomLightShow(random(0,10));  // xxx do not call any shows that in turn have a pauseTime! - temporarily turn off random light show
+				BlinkM_stopScript( scriptAllBlinkMs );    // stop all scripts from playing
+				swipeRight(random(50,200), random(0,9), random(0,8));
 			prevMinutes = RTC.getMinutes(); }
 
 		// if on average 6 seconds has passed, cause a random pendant to fade to a random color
